@@ -18,6 +18,15 @@ h2 {
   color: #2b2d42;
   margin-bottom: 2rem;
   text-transform: uppercase;
+  border-bottom: 2px solid #457b9d; /* Add a bottom border */
+  padding-bottom: 1rem; /* Add padding below */
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #457b9d;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -25,6 +34,18 @@ p {
   line-height: 1.8;
   color: #555;
   margin-bottom: 2rem;
+}
+
+.info-list {
+  list-style-type: disc;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+  text-align: left; /* Align text to the left for lists */
+}
+
+.info-list li {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 a {
@@ -45,7 +66,15 @@ a:hover {
     font-size: 2rem;
   }
 
+  h3 {
+    font-size: 1.5rem;
+  }
+
   p {
     font-size: 1.1rem;
+  }
+
+  .info-list li {
+    font-size: 1rem;
   }
 }

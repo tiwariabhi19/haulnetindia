@@ -1,5 +1,5 @@
 .header-container {
-  background-color: #457b9d;
+  background-color: #fff;
   width: 100%;
   padding: 0;
   margin: 0;
@@ -9,24 +9,31 @@
   top: 0;
   left: 0;
   right: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
+  padding: 0.5rem 5%;
   max-width: 1200px;
   margin: 0 auto;
+  height: 60px;
 }
 
 .logo-container {
-  flex: 1;
+  flex: 0 1 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  height: 2rem;
+  height: 70px;
   width: auto;
+  cursor: pointer;
+  margin-right: 20px;
 }
 
 .nav-menu {
@@ -39,16 +46,18 @@
 }
 
 .nav-menu li {
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   cursor: pointer;
-  color: #fff;
-  transition: color 0.3s ease;
-  font-size: 1.2rem;
+  color: #457b9d;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .nav-menu li:hover {
   color: #ffa500;
-  text-decoration: underline;
+  text-decoration: none;
+  transform: scale(1.1);
 }
 
 .mobile-icon {
@@ -60,7 +69,7 @@
     position: fixed;
     top: 64px;
     right: -300px;
-    width: 17rem;
+    width: 70%;
     height: 100vh;
     background: #457b9d;
     flex-direction: column;
@@ -75,7 +84,7 @@
   }
 
   .nav-menu li {
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 1rem;
   }
 

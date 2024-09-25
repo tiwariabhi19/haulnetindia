@@ -18,25 +18,25 @@ const Headers = () => {
         <div className="logo-container">
           <img
             className="logo"
-            src="/images/logo.svg"
+            src="/images/logo.png"
             alt="logo"
             onClick={changeHomePage}
           />
         </div>
         <ul className={clicked ? "nav-menu active" : "nav-menu"}>
-          <Link to="/">
+          <Link to="/" className="nav-link">
             <li>Home</li>
           </Link>
-          <Link to="/about">
+          <Link to="/about" className="nav-link">
             <li>About</li>
           </Link>
-          <Link to="/services">
+          <Link to="/services" className="nav-link">
             <li>Services</li>
           </Link>
-          <Link to="/contact">
+          <Link to="/contact" className="nav-link">
             <li>Contact</li>
           </Link>
-          <Link to="/privacy">
+          <Link to="/privacy" className="nav-link">
             <li>Privacy</li>
           </Link>
         </ul>

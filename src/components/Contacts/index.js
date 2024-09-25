@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Headers from "../Headers";
 import Footer from "../Footer";
+import emailjs from "emailjs-com";
 import "./index.css";
 
 const Contacts = () => {
@@ -17,20 +18,25 @@ const Contacts = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:4000/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    const templateParams = {
+      from_name: `${formData.firstName} ${formData.lastName}`,
+      from_email: formData.email,
+      to_name: "Haulnet India Pvt Ltd",
+      message: formData.message,
+      phone: formData.mobile,
+    };
 
-      if (response.ok) {
-        alert("Message sent successfully");
+    const serviceID = process.env.REACT_APP_SERVICE_ID;
+    const templateID = process.env.REACT_APP_TEMPLATE_ID;
+    const userID = process.env.REACT_APP_USER_ID;
+
+    emailjs.send(serviceID, templateID, templateParams, userID).then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        alert("Message sent successfully!");
         setFormData({
           firstName: "",
           lastName: "",
@@ -38,13 +44,12 @@ const Contacts = () => {
           email: "",
           message: "",
         });
-      } else {
-        alert("Failed to send message");
+      },
+      (error) => {
+        console.log("FAILED...", error);
+        alert("Failed to send message. Please try again later.");
       }
-    } catch (error) {
-      console.error("Error submitting the form:", error);
-      alert("Error sending message");
-    }
+    );
   };
 
   return (
@@ -55,15 +60,21 @@ const Contacts = () => {
           <div className="contact-info">
             <h2>Contact Us</h2>
             <p>
-              We’re here to help! Fill in the form below and one of our team
-              members will reach out to you soon.
+              We’re here to help! Fill in the form and one of our team members
+              will reach out to you soon.
             </p>
             <div className="contact-details">
               <p>
-                <strong>Email:</strong> support@shivshaktitransport.com
+                <strong>Email</strong>
               </p>
               <p>
-                <strong>Phone:</strong> +91-123-456789
+                accounts@haulnetindia.com <br />
+                info@haulnetindia.com
+                <br />
+                akbose@haulnetindia.com
+              </p>
+              <p>
+                <strong>Contact Number:</strong> +91-8878207452
               </p>
             </div>
           </div>

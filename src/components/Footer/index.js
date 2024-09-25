@@ -38,13 +38,14 @@ const Footer = () => {
         <div className="footer-column contact-us">
           <h3>Contact Us</h3>
           <p>
-            <strong>Phone:</strong> +123 456 7890
+            <strong>Phone:</strong> +91 8878207452
           </p>
           <p>
-            <strong>Email:</strong> info@shivshaktitransport.com
+            <strong>Email:</strong> info@haulnetindia.com
           </p>
           <p>
-            <strong>Address:</strong> 123 Navi Mumbai, Maharashtra, INDIA
+            <strong>Address:</strong> 91F, Pocket 4, Mayur Vihar phase 1
+            Delhi 110091, INDIA
           </p>
         </div>
 
@@ -87,7 +88,7 @@ const Footer = () => {
       {/* Footer Bottom Section */}
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Shiv Shakti Transport. All rights
+          &copy; {new Date().getFullYear()} Haulnet India Pvt Ltd. All rights
           reserved.
         </p>
       </div>

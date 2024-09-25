@@ -9,25 +9,51 @@ const About = () => {
       <Headers />
       <section className="about-section">
         <div className="about-container">
-          <h2>About Us</h2>
+          <h3>About Us</h3>
           <p>
-            At Shiv Shakti Transport, we’ve been revolutionizing logistics and
-            transportation for over 20 years. Our dedicated team and
-            state-of-the-art fleet ensure that goods arrive at their destination
-            safely and on time, anywhere in the country.
+            Haulnet India Pvt Ltd is a leading name in the realm of
+            temperature-controlled logistics, serving businesses across India
+            with unmatched reliability and efficiency. Established with a vision
+            to revolutionize the industry, we have evolved into a trusted
+            partner for sectors requiring precision in the handling and storage
+            of perishable goods. Our mission is to ensure the safe, timely, and
+            efficient delivery of your products, maintaining their quality and
+            integrity from origin to destination. With our state-of-the-art
+            fleet of over 50 specialized vehicles and advanced technology, we
+            provide comprehensive logistics solutions that consistently exceed
+            industry expectations.
           </p>
+
+          {/* <img
+            src="https://media.istockphoto.com/photos/-picture-id1311934969?b=1&k=20&m=1311934969&s=170667a&w=0&h=UQ3F8CE5zam5mT5swIliZ9nO7dhX4ZzsALMufFdv6Ys="
+            alt="About us"
+            className="about-image"
+          /> */}
+
+          <h3>Our Reach</h3>
           <p>
-            Our core values of reliability, efficiency, and innovation drive us
-            to be the best in the business, whether you need local deliveries or
-            long-distance transportation. Trust us to move what matters most to
-            you.
+            We have strategically located branches in key cities across India,
+            including Delhi, Guwahati, Mumbai, and Bangalore, enabling us to
+            provide seamless logistics services across multiple states such as
+            Uttar Pradesh, Delhi NCR, Maharashtra, Karnataka, Haryana, Punjab,
+            and Chandigarh. This extensive network allows us to offer faster
+            transit times, reduce operational costs, and ensure efficient
+            delivery solutions tailored to meet the diverse needs of our clients
+            in various industries.
+          </p>
+          <h3>Services Offered</h3>
+          <p>
+            We specialize in Pan India distribution and warehousing services,
+            offering end-to-end logistics solutions that ensure your goods are
+            delivered safely, efficiently, and in optimal condition, every time.
+            Our state-of-the-art warehousing facilities and extensive nationwide
+            network are designed to handle a wide variety of products, from
+            perishable items to high-value goods, with precision. Through
+            real-time tracking, advanced inventory management, and a dedicated
+            team, we deliver unmatched reliability and transparency, providing
+            peace of mind while optimizing your business operations.{" "}
           </p>
         </div>
-        <img
-          src="https://media.istockphoto.com/photos/-picture-id1311934969?b=1&k=20&m=1311934969&s=170667a&w=0&h=UQ3F8CE5zam5mT5swIliZ9nO7dhX4ZzsALMufFdv6Ys="
-          alt="About us"
-          className="about-image"
-        />
       </section>
 
       <section className="about-mission">
@@ -35,9 +61,11 @@ const About = () => {
           <h2>Our Mission</h2>
           <p>
             We are committed to delivering exceptional services by continually
-            improving our processes and adopting the latest technologies in
-            logistics. Our mission is to provide the best transport solutions,
-            ensuring a seamless experience for all our clients.
+            enhancing our processes and adopting cutting-edge technologies in
+            logistics. Our mission is to provide comprehensive, efficient
+            solutions that ensure a seamless and reliable experience for all our
+            clients, safeguarding the integrity of their goods from start to
+            finish.
           </p>
         </div>
         <div className="mission-image">
@@ -80,34 +108,31 @@ const About = () => {
         <div className="testimonial-wrapper">
           <div className="testimonial-card">
             <p className="testimonial-quote">
-              "Shiv Shakti Transport has been our go-to logistics partner for
-              years. They are reliable, fast, and always provide excellent
-              service!"
+              "Haulnet India Pvt Ltd has streamlined our logistics operations
+              seamlessly. Their professionalism and punctuality are
+              exceptional!"
             </p>
-            <h4 className="testimonial-author">
-              Rajesh Kumar, CEO of XYZ Corp
-            </h4>
+            <h4 className="testimonial-author">Rajesh Kumar</h4>
           </div>
           <div className="testimonial-card">
             <p className="testimonial-quote">
-              "I have never worked with a transport company as efficient and
-              trustworthy as Shiv Shakti. Highly recommended!"
+              "We've never experienced such efficiency in transportation
+              services. Haulnet India is always reliable and goes above and
+              beyond to meet our needs."
             </p>
-            <h4 className="testimonial-author">
-              Anjali Patel, Operations Manager at ABC Ltd
-            </h4>
+            <h4 className="testimonial-author">Anjali Patel</h4>
           </div>
           <div className="testimonial-card">
             <p className="testimonial-quote">
-              "Their customer service is unmatched. I can always rely on them to
-              deliver on time."
+              "Their attention to detail and excellent customer service set them
+              apart from the rest. We trust Haulnet India for all our logistics
+              needs."
             </p>
-            <h4 className="testimonial-author">
-              Rohit Mehta, Supply Chain Manager at DEF Enterprises
-            </h4>
+            <h4 className="testimonial-author">Rohit Mehta</h4>
           </div>
         </div>
       </section>
+
       <Footer />
     </>
   );
