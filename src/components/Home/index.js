@@ -6,10 +6,6 @@ import Footer from "../Footer";
 import "./index.css";
 
 const Home = () => {
-  // const handleGetQuoteClick = () => {
-  //   navigate("/get-quote");
-  // };
-
   const navigate = useNavigate();
 
   const handleReadMoreClick = () => {
