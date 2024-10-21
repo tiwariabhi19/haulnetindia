@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Headers from "../Headers";
 import Footer from "../Footer";
-import emailjs from "emailjs-com";
 import "./index.css";
 
 const Contacts = () => {
@@ -18,7 +17,7 @@ const Contacts = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const templateParams = {
@@ -29,14 +28,19 @@ const Contacts = () => {
       phone: formData.mobile,
     };
 
-    const serviceID = process.env.REACT_APP_SERVICE_ID;
-    const templateID = process.env.REACT_APP_TEMPLATE_ID;
-    const userID = process.env.REACT_APP_USER_ID;
+    try {
+      const response = await fetch("http://localhost:4000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(templateParams),
+      });
 
-    emailjs.send(serviceID, templateID, templateParams, userID).then(
-      (response) => {
-        console.log("SUCCESS!", response.status, response.text);
-        alert("Message sent successfully!");
+      if (response.ok) {
+        alert(
+          "Thank you for your message. We will get in touch with you shortly"
+        );
         setFormData({
           firstName: "",
           lastName: "",
@@ -44,12 +48,13 @@ const Contacts = () => {
           email: "",
           message: "",
         });
-      },
-      (error) => {
-        console.log("FAILED...", error);
+      } else {
         alert("Failed to send message. Please try again later.");
       }
-    );
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Failed to send message. Please try again later.");
+    }
   };
 
   return (
@@ -67,12 +72,7 @@ const Contacts = () => {
               <p>
                 <strong>Email</strong>
               </p>
-              <p>
-                accounts@haulnetindia.com <br />
-                info@haulnetindia.com
-                <br />
-                akbose@haulnetindia.com
-              </p>
+              <p>info@haulnetindia.com</p>
               <p>
                 <strong>Contact Number:</strong> +91-8878207452
               </p>

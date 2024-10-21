@@ -13,21 +13,21 @@ const Home = () => {
   };
 
   const handlePrivacyClick = () => {
-    navigate("/privacy");
+    navigate("/contact");
   };
   return (
     <>
       <Headers />
       <section className="hero">
         <div className="hero-content">
-          <h1>Welcome to Haulnet India</h1>
+          <h1>Welcome to HaulNet India</h1>
           <h4>
-            Your Trusted Partner in Temperature <br />
-            Controlled Logistics
+            Your Trusted Partner in Ambient and Temperature Controlled Logistics
+            & Supply Chain
           </h4>
 
           <p>
-            At Haulnet India, we excel in providing reliable and efficient
+            At HaulNet India, we excel in providing reliable and efficient
             temperature-controlled logistics and distribution solutions across
             India. With our state-of-the-art fleet and dedicated team, we ensure
             your goods are delivered in optimal condition, every time,
@@ -38,7 +38,7 @@ const Home = () => {
               Read More
             </button>
             <button className="trans-btn" onClick={handlePrivacyClick}>
-              Policy
+              Contact US
             </button>
           </div>
         </div>
@@ -50,7 +50,7 @@ const Home = () => {
             <div className="service">
               <div className="service-image-wrapper">
                 <img
-                  src="https://miro.medium.com/v2/resize:fit:1024/1*_PbmtaxXQ-XRwbWz6BHrzQ.jpeg"
+                  src="https://ramcides.com/wp-content/uploads/2023/02/indian-presence-1.jpg"
                   alt="Freight Services"
                   className="service-image"
                 />
@@ -64,7 +64,7 @@ const Home = () => {
             <div className="service">
               <div className="service-image-wrapper">
                 <img
-                  src="https://etek.com.vn/uploaded/gioi-thieu/TPE/he-sinh-thai-01.jpg"
+                  src="https://blog.egestor.com.br/wp-content/uploads/pexels-tiger-lily-4483610-scaled.jpg"
                   alt="Warehousing"
                   className="service-image"
                 />
@@ -77,7 +77,7 @@ const Home = () => {
             <div className="service">
               <div className="service-image-wrapper">
                 <img
-                  src="https://l-consulting.com.ua/wp-content/uploads/Consulting_Header.jpg"
+                  src="https://gdm-catalog-fmapi-prod.imgix.net/ProductScreenshot/eadeb234-89d9-45a5-a6f6-44d9815b7b24.png?auto=format&q=50"
                   alt="Logistics Consulting"
                   className="service-image"
                 />
@@ -100,7 +100,7 @@ const Home = () => {
               />
               <h3>Comprehensive Pan India Distribution</h3>
               <p>
-                At Haulnet India Pvt Ltd, we offer extensive distribution
+                At HaulNet India Pvt Ltd, we offer extensive distribution
                 services that reach every corner of India. Our vast network
                 ensures that your products are delivered efficiently and
                 reliably, no matter the location.
@@ -108,7 +108,7 @@ const Home = () => {
             </div>
             <div className="choose-item">
               <img
-                src="https://thumbs.dreamstime.com/z/state-art-robotic-warehouse-facility-automated-logistics-technology-action-300672529.jpg"
+                src="https://bernardmarr.com/wp-content/uploads/2023/09/3-Ways-To-Reinvent-Your-Products-And-Services-For-The-Future.jpg"
                 alt="24/7 Support"
               />
               <h3>State-of-the-Art Warehousing Solutions</h3>
@@ -121,7 +121,7 @@ const Home = () => {
             </div>
             <div className="choose-item">
               <img
-                src="https://www.kreston.co.il/en/wp-content/uploads/sites/2/2017/03/About-mgmt-ilus.png"
+                src="https://www.encocam.com/wp-content/uploads/2017/11/quality.jpg"
                 alt="Safety First"
               />
               <h3>Commitment to Quality</h3>
@@ -161,12 +161,12 @@ const Home = () => {
             </div>
             <div className="choose-item">
               <img
-                src="https://thumbs.dreamstime.com/z/customer-centric-approach-blue-customer-centric-approach-blue-background-280973566.jpg"
+                src="https://hospitalityinsights.ehl.edu/hubfs/Customer%20centricity-1.jpeg"
                 alt="Safety First"
               />
               <h3>Customer-Centric Approach</h3>
               <p>
-                At Haulnet India Pvt Ltd, our clients are at the heart of
+                At HaulNet India Pvt Ltd, our clients are at the heart of
                 everything we do. We offer tailored solutions to meet your
                 unique needs, ensuring a seamless experience from start to
                 finish.
@@ -175,13 +175,13 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="testimonials-section">
+      {/* <section className="testimonials-section">
         <div className="container">
           <h2>What Our Clients Say</h2>
           <div className="testimonials-grid">
             <div className="testimonial">
               <p>
-                Haulnet India has transformed our logistics operations. Their
+                HaulNet India has transformed our logistics operations. Their
                 Pan India distribution network is exceptional, ensuring our
                 products reach every corner of the country on time and in
                 perfect condition.
@@ -190,7 +190,7 @@ const Home = () => {
             </div>
             <div className="testimonial">
               <p>
-                We trust Haulnet for our temperature-sensitive goods. Their
+                We trust HaulNet for our temperature-sensitive goods. Their
                 state-of-the-art warehousing and commitment to quality have
                 given us peace of mind, knowing our products are always safe.
               </p>
@@ -198,7 +198,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="cta-section">
         <div className="container">
           <h2>Ready to Get Started?</h2>
@@ -206,6 +206,10 @@ const Home = () => {
             Contact us today to find out how we can streamline your logistics
             operations.
           </p>
+          {/* Contact Us Button */}
+          <button className="btn" onClick={handlePrivacyClick}>
+            Click Here
+          </button>
         </div>
       </section>
       <Footer />

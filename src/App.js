@@ -8,6 +8,7 @@ import Home from "./components/Home";
 import Privacy from "./components/Privacy";
 import Services from "./components/Services";
 import ScrollToTop from "./components/ScrollToTop";
+import Career from "./components/CareerPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/services" element={<Services />} />
         <Route exact path="/contact" element={<Contacts />} />
         <Route exact path="/privacy" element={<Privacy />} />
+        <Route exact path="/career" element={<Career />} />
         <Route element={<Footer />} />
       </Routes>
     </BrowserRouter>

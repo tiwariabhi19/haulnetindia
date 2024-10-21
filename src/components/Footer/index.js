@@ -1,6 +1,5 @@
 import React from "react";
 import "./index.css";
-
 import {
   FaFacebookF,
   FaInstagram,
@@ -26,6 +25,9 @@ const Footer = () => {
               <a href="/services">Services</a>
             </li>
             <li>
+              <a href="/career">Career</a>
+            </li>
+            <li>
               <a href="/contact">Contact Us</a>
             </li>
             <li>
@@ -44,8 +46,8 @@ const Footer = () => {
             <strong>Email:</strong> info@haulnetindia.com
           </p>
           <p>
-            <strong>Address:</strong> 91F, Pocket 4, Mayur Vihar phase 1
-            Delhi 110091, INDIA
+            <strong>Address:</strong> 91F, Pocket 4, Mayur Vihar phase 1, Delhi
+            110091, INDIA
           </p>
         </div>
 
