@@ -20,14 +20,14 @@ const Home = () => {
       <Headers />
       <section className="hero">
         <div className="hero-content">
-          <h1>Welcome to HaulNet India</h1>
+          <h1>Welcome to HaulNet International</h1>
           <h4>
             Your Trusted Partner in Ambient and Temperature Controlled Logistics
             & Supply Chain
           </h4>
 
           <p>
-            At HaulNet India, we excel in providing reliable and efficient
+            At HaulNet International, we excel in providing reliable and efficient
             temperature-controlled logistics and distribution solutions across
             India. With our state-of-the-art fleet and dedicated team, we ensure
             your goods are delivered in optimal condition, every time,
@@ -95,12 +95,12 @@ const Home = () => {
           <div className="choose-grid">
             <div className="choose-item">
               <img
-                src="https://blog.radware.com/wp-content/uploads/2016/04/transportation-threats-2.png"
+                src="https://as1.ftcdn.net/v2/jpg/03/23/91/10/1000_F_323911052_o5dmj9gpocDtZWs0WwDUB07ejq3vymGd.jpg"
                 alt="On-time Delivery"
               />
               <h3>Comprehensive Pan India Distribution</h3>
               <p>
-                At HaulNet India Pvt Ltd, we offer extensive distribution
+                At HaulNet International Pvt Ltd, we offer extensive distribution
                 services that reach every corner of India. Our vast network
                 ensures that your products are delivered efficiently and
                 reliably, no matter the location.
@@ -166,7 +166,7 @@ const Home = () => {
               />
               <h3>Customer-Centric Approach</h3>
               <p>
-                At HaulNet India Pvt Ltd, our clients are at the heart of
+                At HaulNet International Pvt Ltd, our clients are at the heart of
                 everything we do. We offer tailored solutions to meet your
                 unique needs, ensuring a seamless experience from start to
                 finish.
@@ -181,7 +181,7 @@ const Home = () => {
           <div className="testimonials-grid">
             <div className="testimonial">
               <p>
-                HaulNet India has transformed our logistics operations. Their
+                HaulNet International has transformed our logistics operations. Their
                 Pan India distribution network is exceptional, ensuring our
                 products reach every corner of the country on time and in
                 perfect condition.

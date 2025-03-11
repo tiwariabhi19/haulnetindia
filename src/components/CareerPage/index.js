@@ -10,12 +10,86 @@ const Career = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+
+    // Live validation for mobile number
+    if (name === "mobile") {
+      if (value.length > 10) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          mobile: "Mobile number must be exactly 10 digits",
+        }));
+      } else if (!/^\d+$/.test(value)) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          mobile: "Mobile number must contain only digits",
+        }));
+      } else if (value.length === 10) {
+        setErrors((prevErrors) => {
+          const newErrors = { ...prevErrors };
+          delete newErrors.mobile; // Remove the error if valid
+          return newErrors;
+        });
+      } else {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          mobile: "Mobile number must be exactly 10 digits",
+        }));
+      }
+    }
+
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Validate name
+    if (!formData.name) {
+      newErrors.name = "Name is required";
+    }
+
+    // Validate email
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is invalid";
+    }
+
+    // Validate mobile (must be exactly 10 digits)
+    if (!formData.mobile) {
+      newErrors.mobile = "Mobile number is required";
+    } else if (!/^\d{10}$/.test(formData.mobile)) {
+      newErrors.mobile = "Mobile number must be exactly 10 digits";
+    }
+
+    // Validate position
+    if (!formData.position) {
+      newErrors.position = "Position is required";
+    }
+
+    // Validate message
+    if (!formData.message) {
+      newErrors.message = "Message is required";
+    }
+
+    return newErrors;
   };
 
   const sendEmail = async (e) => {
     e.preventDefault();
+
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return; // Stop submission if there are errors
+    }
+
+    setIsLoading(true); // Set loading state
 
     const templateParams = {
       from_name: formData.name,
@@ -23,7 +97,7 @@ const Career = () => {
       mobile: formData.mobile,
       position: formData.position,
       message: formData.message,
-      to_name: "Haulnet India",
+      to_name: "Haulnet International",
     };
 
     try {
@@ -44,6 +118,7 @@ const Career = () => {
           position: "",
           message: "",
         });
+        setErrors({});
       } else {
         const errorData = await response.json();
         console.error("Error sending email:", errorData);
@@ -52,9 +127,9 @@ const Career = () => {
     } catch (error) {
       console.error("Error sending email:", error);
       alert("Failed to submit application.");
+    } finally {
+      setIsLoading(false);
     }
-
-    e.target.reset();
   };
 
   return (
@@ -62,7 +137,7 @@ const Career = () => {
       <div className="career-header">
         <h1>Join Our Team</h1>
         <p>
-          At Haulnet India Pvt Ltd, we're always looking for talented
+          At Haulnet International Pvt Ltd, we're always looking for talented
           individuals to grow with us.
         </p>
         <p>
@@ -102,6 +177,7 @@ const Career = () => {
               placeholder="Enter your name"
               required
             />
+            {errors.name && <span className="error">{errors.name}</span>}
           </div>
 
           <div className="form-group">
@@ -114,7 +190,9 @@ const Career = () => {
               placeholder="Enter your email"
               required
             />
+            {errors.email && <span className="error">{errors.email}</span>}
           </div>
+
           <div className="form-group">
             <label>Mobile:</label>
             <input
@@ -125,6 +203,7 @@ const Career = () => {
               onChange={handleChange}
               required
             />
+            {errors.mobile && <span className="error">{errors.mobile}</span>}
           </div>
 
           <div className="form-group">
@@ -137,6 +216,9 @@ const Career = () => {
               placeholder="Position you're applying for"
               required
             />
+            {errors.position && (
+              <span className="error">{errors.position}</span>
+            )}
           </div>
 
           <div className="form-group">
@@ -148,10 +230,15 @@ const Career = () => {
               onChange={handleChange}
               required
             ></textarea>
+            {errors.message && <span className="error">{errors.message}</span>}
           </div>
 
-          <button type="submit" className="submit-btn">
-            Submit
+          <button
+            type="submit"
+            className={`submit-btn ${isLoading ? "loading" : ""}`}
+            disabled={isLoading}
+          >
+            {isLoading ? "Submitting..." : "Submit"}
           </button>
         </form>
       </div>

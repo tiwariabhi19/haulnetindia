@@ -90,7 +90,7 @@ const Footer = () => {
       {/* Footer Bottom Section */}
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Haulnet India Pvt Ltd. All rights
+          &copy; {new Date().getFullYear()} Haulnet International Pvt Ltd. All rights
           reserved.
         </p>
       </div>

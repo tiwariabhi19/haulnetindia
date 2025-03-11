@@ -13,7 +13,7 @@ const About = () => {
           <div className="about-card">
             <h4>Who We Are</h4>
             <p>
-              HaulNet India Pvt Ltd is a trusted & preferred
+              HaulNet International Pvt Ltd is a trusted & preferred
               temperature-controlled logistics company, dedicated to serving
               businesses across India with unmatched reliability and efficiency.
               We specialize in managing the intricate supply chains of
@@ -147,7 +147,7 @@ const About = () => {
         <div className="testimonial-wrapper">
           <div className="testimonial-card">
             <p className="testimonial-quote">
-              "HaulNet India Pvt Ltd has streamlined our logistics operations
+              "HaulNet International Pvt Ltd has streamlined our logistics operations
               seamlessly. Their professionalism and punctuality are
               exceptional!"
             </p>
@@ -156,7 +156,7 @@ const About = () => {
           <div className="testimonial-card">
             <p className="testimonial-quote">
               "We've never experienced such efficiency in transportation
-              services. HaulNet India is always reliable and goes above and
+              services. HaulNet International is always reliable and goes above and
               beyond to meet our needs."
             </p>
             <h4 className="testimonial-author">Anjali Patel</h4>
@@ -164,7 +164,7 @@ const About = () => {
           <div className="testimonial-card">
             <p className="testimonial-quote">
               "Their attention to detail and excellent customer service set them
-              apart from the rest. We trust HaulNet India for all our logistics
+              apart from the rest. We trust HaulNet International for all our logistics
               needs."
             </p>
             <h4 className="testimonial-author">Rohit Mehta</h4>

@@ -12,20 +12,92 @@ const Contacts = () => {
     message: "",
   });
 
+  const [errors, setErrors] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
+
+    // Live validation for mobile number
+    if (name === "mobile") {
+      if (value.length > 10) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          mobile: "Mobile number must be exactly 10 digits",
+        }));
+      } else if (!/^\d+$/.test(value)) {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          mobile: "Mobile number must contain only digits",
+        }));
+      } else if (value.length === 10) {
+        setErrors((prevErrors) => {
+          const newErrors = { ...prevErrors };
+          delete newErrors.mobile; // Remove the error if valid
+          return newErrors;
+        });
+      } else {
+        setErrors((prevErrors) => ({
+          ...prevErrors,
+          mobile: "Mobile number must be exactly 10 digits",
+        }));
+      }
+    }
+
     setFormData({ ...formData, [name]: value });
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+
+    // Validate first name
+    if (!formData.firstName) {
+      newErrors.firstName = "First name is required";
+    }
+
+    // Validate last name
+    if (!formData.lastName) {
+      newErrors.lastName = "Last name is required";
+    }
+
+    // Validate mobile (must be exactly 10 digits)
+    if (!formData.mobile) {
+      newErrors.mobile = "Mobile number is required";
+    } else if (!/^\d{10}$/.test(formData.mobile)) {
+      newErrors.mobile = "Mobile number must be exactly 10 digits";
+    }
+
+    // Validate email
+    if (!formData.email) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Email is invalid";
+    }
+
+    // Validate message
+    if (!formData.message) {
+      newErrors.message = "Message is required";
+    }
+
+    return newErrors;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return; // Stop submission if there are errors
+    }
+
+    setIsLoading(true); // Set loading state
     const templateParams = {
       from_name: `${formData.firstName} ${formData.lastName}`,
       from_email: formData.email,
-      to_name: "Haulnet India Pvt Ltd",
+      to_name: "Haulnet International Pvt Ltd",
       message: formData.message,
-      phone: formData.mobile,
+      mobile: formData.mobile,
     };
 
     try {
@@ -48,12 +120,15 @@ const Contacts = () => {
           email: "",
           message: "",
         });
+        setErrors({});
       } else {
         alert("Failed to send message. Please try again later.");
       }
     } catch (error) {
       console.error("Error sending message:", error);
       alert("Failed to send message. Please try again later.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -89,6 +164,9 @@ const Contacts = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.firstName && (
+                <span className="error">{errors.firstName}</span>
+              )}
               <input
                 type="text"
                 name="lastName"
@@ -97,6 +175,9 @@ const Contacts = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.lastName && (
+                <span className="error">{errors.lastName}</span>
+              )}
             </div>
             <div className="form-group">
               <input
@@ -107,6 +188,7 @@ const Contacts = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.mobile && <span className="error">{errors.mobile}</span>}
               <input
                 type="email"
                 name="email"
@@ -115,6 +197,7 @@ const Contacts = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.email && <span className="error">{errors.email}</span>}
             </div>
             <textarea
               name="message"
@@ -123,8 +206,14 @@ const Contacts = () => {
               onChange={handleChange}
               required
             ></textarea>
-            <button type="submit" className="btn-submit">
-              Send Message
+            {errors.message && <span className="error">{errors.message}</span>}
+
+            <button
+              type="submit"
+              className={`btn-submit ${isLoading ? "loading" : ""}`}
+              disabled={isLoading}
+            >
+              {isLoading ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>

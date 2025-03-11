@@ -12,7 +12,7 @@ const Privacy = () => {
         <div className="privacy-container">
           <h2>Privacy Policy</h2>
           <p>
-            At Haulnet India Pvt Ltd, we are committed to protecting your
+            At Haulnet International Pvt Ltd, we are committed to protecting your
             privacy. This Privacy Policy outlines how we collect, use, disclose,
             and safeguard your information when you visit our website and use
             our services. By using our website and services, you consent to the
