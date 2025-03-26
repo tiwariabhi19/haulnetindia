@@ -27,11 +27,11 @@ const Home = () => {
           </h4>
 
           <p>
-            At HaulNet International, we excel in providing reliable and efficient
-            temperature-controlled logistics and distribution solutions across
-            India. With our state-of-the-art fleet and dedicated team, we ensure
-            your goods are delivered in optimal condition, every time,
-            safeguarding their quality and integrity.
+            At HaulNet International, we excel in providing reliable and
+            efficient temperature-controlled logistics and distribution
+            solutions across India. With our state-of-the-art fleet and
+            dedicated team, we ensure your goods are delivered in optimal
+            condition, every time, safeguarding their quality and integrity.
           </p>
           <div className="buttons">
             <button className="btn" onClick={handleReadMoreClick}>
@@ -50,7 +50,7 @@ const Home = () => {
             <div className="service">
               <div className="service-image-wrapper">
                 <img
-                  src="https://ramcides.com/wp-content/uploads/2023/02/indian-presence-1.jpg"
+                  src="https://abctechnolab.com/wp-content/uploads/2018/03/Map.png"
                   alt="Freight Services"
                   className="service-image"
                 />
@@ -89,6 +89,77 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="industries-section">
+        <div className="container">
+          <h2 className="section-title">Industries We Cater</h2>
+          <div className="industries-grid">
+            <div className="industry">
+              <img
+                src="https://realitypod.com/wp-content/uploads/2015/05/sandwiches-2.jpg"
+                alt="Industry"
+                className="industry-image"
+              />
+            </div>
+            <div className="industry">
+              <img
+                src="https://edplants.com.br/wp-content/uploads/2018/08/fresh-fruits-vegetables-2419.jpg"
+                alt="Industry"
+                className="industry-image"
+              />
+            </div>
+            <div className="industry">
+              <img
+                src="https://cdn.wallpapersafari.com/94/80/DRKkGm.jpg"
+                alt="Industry"
+                className="industry-image"
+              />
+            </div>
+            <div className="industry">
+              <img
+                src="https://heyfoodapp.com/api/public/img/hUG7lTPFyIJ.jpg"
+                alt="Industry"
+                className="industry-image"
+              />
+            </div>
+            <div className="industry">
+              <img
+                src="https://www.tasteandtellblog.com/wp-content/uploads/2022/04/Mango-Sorbet-5.jpg"
+                alt="Industry"
+                className="industry-image"
+              />
+            </div>
+            <div className="industry">
+              <img
+                src="https://tb-static.uber.com/prod/image-proc/processed_images/e2fa347203e162033495df942b0c421b/3ac2b39ad528f8c8c5dc77c59abb683d.jpeg"
+                alt="Industry"
+                className="industry-image"
+              />
+            </div>
+            <div className="industry">
+              <img
+                src="https://www.mashed.com/img/gallery/the-real-reason-save-a-lot-food-is-so-cheap/save-a-lot-keeps-it-small-1593478227.jpg"
+                alt="Industry"
+                className="industry-image"
+              />
+            </div>
+            <div className="industry">
+              <img
+                src="https://cdn.maxvandaag.nl/2016/06/medicijngebruik_shutterstock-scaled.jpg?"
+                alt="Industry"
+                className="industry-image"
+              />
+            </div>
+            <div className="industry">
+              <img
+                src="https://emmainternational.com/wp-content/uploads/2024/06/Pharma_Syringe-and-Vial-scaled.jpg"
+                alt="Industry"
+                className="industry-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="why-choose-us">
         <div className="container">
           <h2>Why Choose Us</h2>
@@ -100,9 +171,9 @@ const Home = () => {
               />
               <h3>Comprehensive Pan India Distribution</h3>
               <p>
-                At HaulNet International Pvt Ltd, we offer extensive distribution
-                services that reach every corner of India. Our vast network
-                ensures that your products are delivered efficiently and
+                At HaulNet International Pvt Ltd, we offer extensive
+                distribution services that reach every corner of India. Our vast
+                network ensures that your products are delivered efficiently and
                 reliably, no matter the location.
               </p>
             </div>
@@ -166,8 +237,8 @@ const Home = () => {
               />
               <h3>Customer-Centric Approach</h3>
               <p>
-                At HaulNet International Pvt Ltd, our clients are at the heart of
-                everything we do. We offer tailored solutions to meet your
+                At HaulNet International Pvt Ltd, our clients are at the heart
+                of everything we do. We offer tailored solutions to meet your
                 unique needs, ensuring a seamless experience from start to
                 finish.
               </p>

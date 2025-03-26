@@ -71,7 +71,7 @@
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
-    top: 60px; /* Adjusted to match the navbar height */
+    top: 75px; /* Adjusted to match the navbar height */
     right: -100%;
     width: 70%;
     height: 100vh;

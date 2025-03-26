@@ -43,11 +43,11 @@ const Footer = () => {
             <strong>Phone:</strong> +91 8878207452
           </p>
           <p>
-            <strong>Email:</strong> info@haulnetindia.com
+            <strong>Email:</strong> Info@haulnet.in 
           </p>
           <p>
-            <strong>Address:</strong> 91F, Pocket 4, Mayur Vihar phase 1, Delhi
-            110091, INDIA
+            <strong>Address:</strong> 624, A/3 WING, 6th FLOOR, SILVER SPRINGS,
+            PLOT NO. G-6, TALOJA MIDC, RAIGAD -410208.
           </p>
         </div>
 
@@ -90,8 +90,8 @@ const Footer = () => {
       {/* Footer Bottom Section */}
       <div className="footer-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Haulnet International Pvt Ltd. All rights
-          reserved.
+          &copy; {new Date().getFullYear()} HAULNET INTERNATIONAL PRIVATE LIMITED. All
+          rights reserved.
         </p>
       </div>
     </footer>

@@ -133,6 +133,8 @@ const Career = () => {
   };
 
   return (
+
+    
     <section className="career-page">
       <div className="career-header">
         <h1>Join Our Team</h1>

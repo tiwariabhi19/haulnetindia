@@ -69,7 +69,7 @@ const Privacy = () => {
           <p>
             If you have any questions or concerns about this Privacy Policy,
             please contact us at{" "}
-            <a href="mailto:info@haulnetindia.com">info@haulnetindia.com</a>.
+            <a href="mailto:info@haulnetindia.com">Info@haulnet.in</a>.
           </p>
         </div>
       </section>
