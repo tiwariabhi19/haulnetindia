@@ -149,7 +149,7 @@ const Contacts = () => {
               </p>
               <p>Info@haulnet.in </p>
               <p>
-                <strong>Contact Number:</strong> +91-8878207452
+                <strong>Contact Number:</strong> +91-9091555595
               </p>
             </div>
           </div>
