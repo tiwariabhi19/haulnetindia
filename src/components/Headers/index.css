@@ -19,7 +19,7 @@
   padding: 0.5rem 5%;
   max-width: 1200px;
   margin: 0 auto;
-  height: 60px; /* Keep the navbar height fixed */
+  height: 65px; /* Increased header height for better spacing */
 }
 
 .logo-container {
@@ -31,13 +31,12 @@
 }
 
 .logo {
-  height: 90px; /* Increased logo size */
+  max-height: 55px; /* Keeps logo within header height */
   width: auto;
   cursor: pointer;
-  margin-right: 20px;
-  position: relative;
-  top: 4px; /* Move the logo upwards slightly to fit in the navbar */
-  transform: translateY(-12%); /* Adjust the vertical alignment */
+  margin: 0;
+  display: block;
+  object-fit: contain; /* Ensures proper scaling */
 }
 
 .nav-menu {
@@ -68,10 +67,11 @@
   display: none;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
   .nav-menu {
     position: fixed;
-    top: 75px; /* Adjusted to match the navbar height */
+    top: 80px; /* Match updated nav height */
     right: -100%;
     width: 70%;
     height: 100vh;
@@ -103,11 +103,7 @@
   }
 
   .logo {
-    height: 65px; /* Adjust the logo size for mobile */
+    max-height: 30px; /* Slightly smaller for mobile */
     width: auto;
-    cursor: pointer;
-    margin-right: 20px;
-    top: 0;
-    transform: none; /* No transform for mobile view */
   }
 }
